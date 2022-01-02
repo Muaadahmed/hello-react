@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 const Button = (props) => {
-  // your code here
   const {children, reset} = props;
 
   return <button onClick={() => reset()}>{children}</button>;
@@ -12,11 +11,7 @@ const Button = (props) => {
 const Application = () => {
   const [name, setName] = useState("");
 
-  // your code here
-
   const reset = () => {
-    console.log("reset");
-    // your code here
     setName("");
   };
 
