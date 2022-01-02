@@ -24,7 +24,7 @@ const Application = () => {
     <main>
       <input value={name} placeholder="Type your name" attribute="Type your name" onChange={(event) => setName(event.target.value)}/>
       <Button reset={reset}>Reset</Button>
-      <h1>Hello {name}</h1>
+      {name && <h1>Hello {name}</h1>}
     </main>
   );
 };
