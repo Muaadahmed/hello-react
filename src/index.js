@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
 const Button = (props) => {
   // your code here
+  const {children, reset} = props;
+
+  return <button onClick={() => reset()}>{children}</button>;
 };
 
 const Application = () => {
+  const [name, setName] = useState("Muaad");
 
   // your code here
 
@@ -17,8 +21,9 @@ const Application = () => {
 
   return (
     <main>
-      {/* your code here -- this entire line including the curly braces can be removed */}
-      <h1>Hello React</h1>
+      <input placeholder='Type your name'></input>
+      <Button reset={reset}>Reset</Button>
+      <h1>Hello {name}</h1>
     </main>
   );
 };
